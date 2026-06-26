@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echo Path</title>
+  <meta name="description" content="Echo Path is an offline sonar exploration puzzle for iOS. Drag through dark caves, fire sonar pulses to reveal walls and shadows, and find the exit in 50 levels.">
+  <style>
+    :root {
+      --bg:#04080d; --panel:#0c1622; --panel2:#142030; --text:#e6f1f7; --muted:#8fa6bb;
+      --cyan:#3dd6c4; --blue:#3a95ea; --gold:#ffd83f; --red:#ff5a5a; --line:rgba(255,255,255,.14);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; color:var(--text); background:radial-gradient(circle at top, #0d2236 0, var(--bg) 50%, #02060a 100%); }
+    a { color:var(--cyan); }
+    .wrap { width:min(1120px, calc(100% - 32px)); margin:0 auto; }
+    .hero { padding:72px 0 44px; text-align:center; }
+    .badge { display:inline-flex; gap:8px; align-items:center; padding:8px 14px; border:1px solid var(--line); border-radius:999px; background:rgba(61,214,196,.10); color:var(--cyan); font-weight:700; }
+    h1 { margin:22px 0 12px; font-size:clamp(44px, 8vw, 86px); line-height:.95; letter-spacing:-.06em; }
+    .subtitle { margin:0 auto; max-width:760px; color:var(--muted); font-size:clamp(18px, 3vw, 24px); line-height:1.5; }
+    .intro { margin:24px auto 0; max-width:760px; color:#bcd6e8; font-size:17px; line-height:1.75; }
+    .screens { padding:32px 0 48px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr)); gap:20px; align-items:start; }
+    .shot-card { background:linear-gradient(180deg, rgba(61,214,196,.08), rgba(255,255,255,.03)); border:1px solid var(--line); border-radius:28px; padding:14px; box-shadow:0 24px 60px rgba(0,0,0,.42); }
+    .shot-card img { width:100%; border-radius:20px; display:block; box-shadow:0 14px 30px rgba(0,0,0,.44); }
+    .shot-card h3 { margin:14px 6px 6px; font-size:18px; }
+    .shot-card p { margin:0 6px 8px; color:var(--muted); line-height:1.45; font-size:14px; }
+    section { padding:36px 0; }
+    h2 { font-size:34px; margin:0 0 20px; letter-spacing:-.03em; }
+    .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { background:rgba(255,255,255,.06); border:1px solid var(--line); border-radius:24px; padding:22px; }
+    .card h3 { margin:0 0 8px; font-size:19px; }
+    .card p, .card li { color:var(--muted); line-height:1.65; }
+    .about-card { background:rgba(61,214,196,.06); border:1px solid var(--line); border-radius:24px; padding:28px; }
+    .about-card p { color:#bcd6e8; line-height:1.8; margin:0 0 16px; }
+    .about-card p:last-child { margin-bottom:0; }
+    .info { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; }
+    .info div { padding:16px; border-radius:18px; background:rgba(255,255,255,.05); border:1px solid var(--line); }
+    .label { color:var(--muted); font-size:13px; text-transform:uppercase; letter-spacing:.08em; }
+    .value { margin-top:5px; font-weight:800; }
+    footer { padding:36px 0 52px; text-align:center; color:var(--muted); border-top:1px solid var(--line); margin-top:40px; }
+    footer a { color:var(--cyan); }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero wrap">
+      <div class="badge">Offline Sonar Exploration Puzzle</div>
+      <h1>Echo Path</h1>
+      <p class="subtitle">Drag through the dark. Fire sonar pulses to reveal walls and shadows. Find the exit before they find you.</p>
+      <p class="intro">Echo Path is a single-player sonar exploration puzzle with 50 progressive cave levels. You control a glowing light point navigating pitch-black caverns, firing limited sonar pulses to briefly illuminate walls, shadow creatures, and the exit. Manage your pulses, dodge patrolling shadows, and reach the cave exit.</p>
+    </header>
+
+    <section class="screens wrap">
+      <div class="grid">
+        <article class="shot-card">
+          <img src="screenshots_65/01_main_menu.png" alt="Echo Path main menu">
+          <h3>Main Menu</h3>
+          <p>Echo Path title screen with Play, Level Select, and Settings buttons.</p>
+        </article>
+        <article class="shot-card">
+          <img src="screenshots_65/02_pulse_reveal.png" alt="Sonar pulse reveals the cave">
+          <h3>Pulse Reveal</h3>
+          <p>A sonar pulse briefly illuminates walls, shadow creatures, and the exit for about 1.4 seconds.</p>
+        </article>
+        <article class="shot-card">
+          <img src="screenshots_65/03_navigate_dark.png" alt="Navigating in the dark">
+          <h3>Navigate the Dark</h3>
+          <p>Drag to move your light point through the cave. Only your glow is visible until you pulse.</p>
+        </article>
+        <article class="shot-card">
+          <img src="screenshots_65/04_avoid_shadows.png" alt="Avoiding shadow creatures">
+          <h3>Avoid Shadows</h3>
+          <p>Shadow creatures patrol the cave and chase you when close. A single touch ends the run.</p>
+        </article>
+        <article class="shot-card">
+          <img src="screenshots_65/05_level_clear.png" alt="Level clear screen">
+          <h3>Level Clear</h3>
+          <p>Reach the exit portal to clear the cave and unlock the next level.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>About Echo Path</h2>
+      <div class="about-card">
+        <p>Echo Path is a sonar exploration puzzle set in pitch-black caves. You control a small glowing light point and must reach the exit on the right side of each cavern. The catch: walls and shadow creatures are invisible in the dark. Your only tool is a sonar pulse that briefly reveals everything around you.</p>
+        <p>Each of the 50 levels adds more walls, more shadow creatures, and fewer pulses. You must balance risk and information — every pulse is precious. Drag carefully through the dark, bump a wall to reveal it locally, or spend a pulse to map the whole cave. Shadow creatures patrol randomly until you enter their aggro radius, then they chase you down.</p>
+        <p>With no ads, no accounts, no analytics, and no internet required, Echo Path is a pure offline puzzle experience. Progress is saved locally on your device, so you can pick up exactly where you left off.</p>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>How to Play</h2>
+      <div class="feature-grid">
+        <div class="card"><h3>Drag to move</h3><p>Touch and drag anywhere on screen to steer your light point. Movement follows your finger smoothly at a fixed speed.</p></div>
+        <div class="card"><h3>Tap PULSE to reveal</h3><p>Tap the PULSE button to fire a sonar pulse that illuminates walls, shadows, and the exit for about 1.4 seconds.</p></div>
+        <div class="card"><h3>Avoid shadow creatures</h3><p>Shadow creatures patrol the cave and switch to chase mode when you enter their 90px aggro radius. One touch and the level fails.</p></div>
+        <div class="card"><h3>Find the exit</h3><p>Reach the glowing exit portal on the right side of the cave to clear the level and unlock the next one.</p></div>
+        <div class="card"><h3>Manage your pulses</h3><p>Each level gives you a limited number of pulses (3 to 8), decreasing as levels progress. Use them wisely.</p></div>
+        <div class="card"><h3>Bump reveals walls</h3><p>If you bump into a wall, that wall briefly lights up so you can map your surroundings without spending a pulse.</p></div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>Support</h2>
+      <div class="feature-grid">
+        <div class="card"><h3>How do I play?</h3><p>Drag to move your light point. Tap PULSE to reveal the cave briefly. Avoid shadow creatures and reach the exit on the right.</p></div>
+        <div class="card"><h3>Does it need internet?</h3><p>No. Echo Path is fully offline with no ads, no accounts, no analytics, and no in-app purchases.</p></div>
+        <div class="card"><h3>Need help?</h3><p>Visit the support page or contact support through the Echo Path App Store product page.</p></div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>App Information</h2>
+      <div class="info">
+        <div><span class="label">Genre</span><div class="value">Games / Puzzle</div></div>
+        <div><span class="label">Compatibility</span><div class="value">iOS 15.0 or later</div></div>
+        <div><span class="label">Device Support</span><div class="value">iPhone only</div></div>
+        <div><span class="label">Age Rating</span><div class="value">4+</div></div>
+        <div><span class="label">Version</span><div class="value">1.0</div></div>
+        <div><span class="label">Language</span><div class="value">English</div></div>
+        <div><span class="label">Privacy</span><div class="value">No data collected</div></div>
+        <div><span class="label">Bundle ID</span><div class="value">com.rosewood.echopath.game</div></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>Echo Path. All rights reserved.</div>
+    <div><a href="/privacy.html">Privacy Policy</a></div>
+  </footer>
+</body>
+</html>
